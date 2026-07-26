@@ -45,3 +45,25 @@ The following diagram illustrates the overall architecture of the deployed solut
 | Azure Backup | Protects virtual machines through scheduled backups. |
 | Recovery Services Vault | Manages backup and recovery operations. |
 | Azure Cost Management | Tracks project spending and budget alerts. |
+
+
+---
+
+# Network Design
+
+## Virtual Network
+
+The project uses a dedicated Azure Virtual Network with the following address space:
+
+| Resource | Configuration |
+|----------|---------------|
+| Virtual Network | 192.168.0.0/16 |
+
+## Subnets
+
+| Subnet | Purpose |
+|---------|---------|
+| Web Subnet | Hosts the IIS web servers |
+| AzureBastionSubnet | Hosts Azure Bastion for secure remote administration |
+
+The Web Subnet contains two Windows Server virtual machines running IIS, while the AzureBastionSubnet provides secure administrative access without exposing the virtual machines to the Internet.
