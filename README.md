@@ -24,9 +24,7 @@ The solution hosts two Windows Server virtual machines running Internet Informat
 
 The following diagram illustrates the overall architecture of the deployed solution.
 
-> **Architecture Diagram**
-
-*(Architecture diagram will be added here.)*
+![Solution Architecture](Architecture/architecture-diagram.png)
 
 ---
 
