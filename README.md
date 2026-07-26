@@ -26,6 +26,7 @@ The following diagram illustrates the overall architecture of the deployed solut
 
 ![Solution Architecture](Architecture/architecture-diagram.png.png)
 
+The architecture is designed to provide high availability, secure remote administration, centralized monitoring, workload protection, and cost visibility by leveraging core Azure infrastructure services.
 ---
 
 ## Azure Services Used
@@ -47,7 +48,7 @@ The following diagram illustrates the overall architecture of the deployed solut
 
 ---
 
-# Network Design
+## Network Design
 
 ## Virtual Network
 
@@ -69,7 +70,7 @@ The Web Subnet contains two Windows Server virtual machines running IIS, while t
 
 ---
 
-# Security Design
+## Security Design
 
 Security was implemented following Azure best practices.
 
@@ -82,3 +83,67 @@ Implemented security controls include:
 - Direct RDP access from the Internet is blocked.
 
 This design minimizes the attack surface while maintaining secure administrative access.
+
+---
+
+## High Availability
+
+High availability was achieved by deploying two Windows Server virtual machines running IIS behind an Azure Standard Load Balancer. Incoming HTTP traffic is automatically distributed between both servers using a health probe and load balancing rule.
+
+---
+
+## Monitoring & Alerting
+
+Azure Monitor and Log Analytics Workspace were configured to collect performance metrics and logs. CPU utilization alerts were created to notify administrators when resource usage exceeds the defined threshold.
+
+---
+
+## Backup Strategy
+
+Azure Backup was configured using a Recovery Services Vault with a daily backup policy. Manual backup was also performed to verify backup functionality and recovery readiness.
+
+---
+
+## Cost Management
+
+Azure Cost Management was configured with a budget and cost alert to monitor project spending and help prevent unexpected charges.
+
+---
+
+## Skills Demonstrated
+
+- Azure Virtual Network (VNet)
+- Azure Subnets
+- Network Security Groups (NSG)
+- Azure Bastion
+- Azure Virtual Machines
+- Azure Standard Load Balancer
+- Azure Monitor
+- Log Analytics Workspace
+- Azure Backup
+- Recovery Services Vault
+- Azure Cost Management
+- Windows Server Administration
+- IIS Web Server
+
+---
+
+## Screenshots
+
+Project screenshots will be added below.
+
+- Architecture Diagram
+- Virtual Network
+- Azure Bastion
+- Load Balancer
+- Backend Pool
+- Health Probe
+- Load Balancing Rule
+- IIS Website (VM1)
+- IIS Website (VM2)
+- Azure Monitor
+- CPU Alert
+- Recovery Services Vault
+- Backup Policy
+- Manual Backup
+- Cost Budget Alert
