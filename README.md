@@ -128,22 +128,4 @@ Azure Cost Management was configured with a budget and cost alert to monitor pro
 
 ---
 
-## Screenshots
 
-Project screenshots will be added below.
-
-- Architecture Diagram
-- Virtual Network
-- Azure Bastion
-- Load Balancer
-- Backend Pool
-- Health Probe
-- Load Balancing Rule
-- IIS Website (VM1)
-- IIS Website (VM2)
-- Azure Monitor
-- CPU Alert
-- Recovery Services Vault
-- Backup Policy
-- Manual Backup
-- Cost Budget Alert
