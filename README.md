@@ -67,3 +67,20 @@ The project uses a dedicated Azure Virtual Network with the following address sp
 | AzureBastionSubnet | Hosts Azure Bastion for secure remote administration |
 
 The Web Subnet contains two Windows Server virtual machines running IIS, while the AzureBastionSubnet provides secure administrative access without exposing the virtual machines to the Internet.
+
+
+---
+
+# Security Design
+
+Security was implemented following Azure best practices.
+
+Implemented security controls include:
+
+- Removed Public IP addresses from both virtual machines.
+- Secure Remote Desktop (RDP) access through Azure Bastion.
+- Network Security Group (NSG) associated with the Web Subnet.
+- HTTP traffic is allowed for the hosted web application.
+- Direct RDP access from the Internet is blocked.
+
+This design minimizes the attack surface while maintaining secure administrative access.
